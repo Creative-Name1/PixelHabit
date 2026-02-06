@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools">
 
+<!-- The manifest contains info about this app for external programs to use -->
+
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    > <!-- I have no clue what this means but I don't think it's necessary to understand-->
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -9,15 +11,29 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
-        android:supportsRtl="true"
         android:theme="@style/Theme.PixelHabitAttempt3">
+        <!-- first 3 tags are related to backing up save data. Will tackle later
+             icon & label are self explanatory
+             I will take the roundIcon out if it's not necessary, will check after this push
+             android:theme is part of the UI. Will tackle soon                               -->
+
+        <!-- Main activity tag, what will eventually be the main list of habits -->
         <activity
             android:name=".MainActivity"
-            android:exported="true">
-            <intent-filter>
+            android:exported="true"> <!-- android:name is necessary to identify the activity
+                                          android:exported means this activity can be accessed
+                                                    from outside the app (necessary to run it) -->
+
+            <intent-filter> <!-- Intent-filter tag is here to declare what this activity is for
+                                               for stuff outside this app (necessary to run it) -->
+
                 <action android:name="android.intent.action.MAIN" />
+                <!-- "This is the main entry point for the app" -->
 
                 <category android:name="android.intent.category.LAUNCHER" />
+                <!-- "This activity should be the face of the app launcher"
+                     (Draw this activity's icon (currently none) on the launcher) -->
+
             </intent-filter>
         </activity>
     </application>
