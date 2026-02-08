@@ -14,8 +14,8 @@ public class Habit {
 
     // CONSTRUCTORS
     public Habit() {
-        habitName = "Habit";
-        habitDesc = "Example description text";
+        habitName = "Untitled habit";
+        habitDesc = "No description";
         completionType = 0;
         completionTypeUnit = 0;
         min = 0;
@@ -74,7 +74,7 @@ public class Habit {
         max = m;
     }
 
-    public void setMinMax(double m, double mx, int unit) {
+    public void setMinMax(double m, double mx, int unit) { // for convenience
         completionTypeUnit = unit;
         min = m;
         max = mx;
