@@ -16,9 +16,11 @@ public class HabitViewHolder extends RecyclerView.ViewHolder {
     private ImageButton completeButton;
     private TextView name;
     private TextView description;
+    private View listItem;
 
-    public HabitViewHolder(View listItem) {
-        super(listItem);
+    public HabitViewHolder(View item) {
+        super(item);
+        listItem = item;
 
         background = (LinearLayout) listItem.findViewById(R.id.background); //
         streakNumber = (TextView) listItem.findViewById(R.id.streak_number);
@@ -53,8 +55,10 @@ public class HabitViewHolder extends RecyclerView.ViewHolder {
     public void setStreakPositivity(boolean itIsPositive) {
         if (itIsPositive) {
             streakIcon.setImageResource(R.drawable.fire);
+            streakNumber.setTextColor(listItem.getContext().getColor(R.color.orange));
         } else {
             streakIcon.setImageResource(R.drawable.zzz);
+            streakNumber.setTextColor(listItem.getContext().getColor(R.color.slate));
         }
     }
 
