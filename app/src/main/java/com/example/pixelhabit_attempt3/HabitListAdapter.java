@@ -8,6 +8,8 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import java.util.ArrayList;
+
 public class HabitListAdapter extends RecyclerView.Adapter<HabitViewHolder> {
     private Habit[] habitList;
 
@@ -25,8 +27,10 @@ public class HabitListAdapter extends RecyclerView.Adapter<HabitViewHolder> {
     @Override
     public void onBindViewHolder(@NonNull HabitViewHolder holder, int position) {
         Habit h = habitList[position];
-        holder.streakNumber = h.getStreak();
-
+        holder.setStreakNumber(h.getStreak());
+        holder.setStreakPositivity(h.getStreakPositive());
+        holder.setName(h.getName());
+        holder.setDescription(h.getDescription());
     }
 
     @Override

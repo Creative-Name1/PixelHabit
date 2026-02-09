@@ -45,8 +45,7 @@
                     android:visibility="visible"
                     android:scaleType="fitCenter"
                     android:scaleX="1"
-                    android:scaleY="1"
-                    android:background=""/>
+                    android:scaleY="1"/>
 
             </LinearLayout>
 
@@ -63,7 +62,7 @@
                 android:layout_marginEnd="10sp"
                 android:layout_marginBottom="10sp"
                 android:layout_marginTop="5sp"
-                android:background=""/>
+                android:background="#000000"/>
 
         </LinearLayout>
 

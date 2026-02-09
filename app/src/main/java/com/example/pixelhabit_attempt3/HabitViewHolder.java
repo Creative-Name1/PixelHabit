@@ -28,12 +28,13 @@ public class HabitViewHolder extends RecyclerView.ViewHolder {
         description = (TextView) listItem.findViewById(R.id.habit_description);
     }
 
+    // Getters
     public LinearLayout getBackground() {
         return background;
     } public TextView getStreakNumber() {
         return streakNumber;
     } public ImageView getStreakIcon() {
-    return streakIcon;
+        return streakIcon;
     } public ImageButton getCompleteButton() {
         return completeButton;
     } public TextView getDescription() {
@@ -41,6 +42,9 @@ public class HabitViewHolder extends RecyclerView.ViewHolder {
     } public TextView getName() {
         return name;
     }
+
+
+    // and from here is a bunch of methods to interact w/ the view
 
     public void setStreakNumber(int streak) {
         streakNumber.setText(String.valueOf(streak));
