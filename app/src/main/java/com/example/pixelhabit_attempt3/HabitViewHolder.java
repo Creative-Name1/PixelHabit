@@ -41,4 +41,32 @@ public class HabitViewHolder extends RecyclerView.ViewHolder {
     } public TextView getName() {
         return name;
     }
+
+    public void setStreakNumber(int streak) {
+        streakNumber.setText(String.valueOf(streak));
+    }
+
+    public void setStreakPositivity(boolean itIsPositive) {
+        if (itIsPositive) {
+            streakIcon.setImageResource(R.drawable.fire);
+        } else {
+            streakIcon.setImageResource(R.drawable.zzz);
+        }
+    }
+
+    public void setName(String n) {
+        name.setText(n);
+    }
+
+    public void setDescription(String desc) {
+        description.setText(desc);
+    }
+
+    public void complete() {
+        completeButton.setImageResource(R.drawable.complete);
+    }
+
+    public void unComplete() {
+        completeButton.setImageResource(R.drawable.incomplete);
+    }
 }

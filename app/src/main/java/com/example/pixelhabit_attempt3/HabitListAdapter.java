@@ -1,5 +1,6 @@
 package com.example.pixelhabit_attempt3;
 
+import android.view.LayoutInflater; // external class that can inflate(make a View object copy of) my habit.xml
 import android.view.View;
 import android.view.ViewGroup;
 
@@ -7,7 +8,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-public class HabitListAdapter extends RecyclerView.Adapter<> {
+public class HabitListAdapter extends RecyclerView.Adapter<HabitViewHolder> {
     private Habit[] habitList;
 
     public HabitListAdapter(Habit[] list) {
@@ -17,16 +18,19 @@ public class HabitListAdapter extends RecyclerView.Adapter<> {
     @NonNull
     @Override
     public HabitViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) { // triggers whenever my RecyclerView needs a new ViewHolder; creates new HabitViewGroup
-
+        View habitView = LayoutInflater.from(parent.getContext()).inflate(R.layout.habit, parent, false); // make a new View object from my habit.xml
+        return new HabitViewHolder(habitView);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull HabitViewHolder holder, int position) {
+        Habit h = habitList[position];
+        holder.streakNumber = h.getStreak();
 
     }
 
     @Override
     public int getItemCount() {
-        return 0;
+        return habitList.length;
     }
 }
