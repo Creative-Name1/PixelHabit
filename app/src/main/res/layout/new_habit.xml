@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="40sp"
+    android:background="@drawable/linearlayout_border"
+    android:orientation="vertical">
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/linearlayout_border"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="18sp"
+            android:layout_marginBottom="10sp"
+            android:fontFamily="@font/ultrakill_font"
+            android:text="New Habit"
+            android:textSize="20sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="2sp"
+            android:layout_marginStart="60sp"
+            android:layout_marginEnd="60sp"
+            android:background="@drawable/black" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10sp"
+            android:layout_marginTop="15sp"
+            android:fontFamily="@font/exo_2"
+            android:hint="Habit name"
+            android:text="Untitled Habit"
+            android:textSize="15sp" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10sp"
+            android:layout_marginBottom="10sp"
+            android:fontFamily="@font/exo_2"
+            android:hint="Habit Description"
+            android:text="No Description"
+            android:textSize="15sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/linearlayout_border_texas_rose"
+        android:layout_margin="15sp"
+        android:layout_gravity="bottom|end">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Create"
+            android:textColor="@color/white"
+            android:fontFamily="@font/ultrakill_font"
+            android:layout_margin="7sp" />
+
+    </LinearLayout>
+
+    <ImageButton
+        android:layout_width="25sp"
+        android:layout_height="25sp"
+        android:layout_marginEnd="15sp"
+        android:layout_marginTop="15sp"
+        android:src="@drawable/X"
+        android:background="#000000"
+        android:scaleType="fitCenter"
+        android:scaleX="1"
+        android:scaleY="1"
+        android:layout_gravity="right"/>
+
+</FrameLayout>
