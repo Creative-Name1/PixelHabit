@@ -13,7 +13,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        ArrayList<Habit> habitList = new ArrayList<Habit>();
+        /*ArrayList<Habit> habitList = new ArrayList<Habit>();
         habitList.add(new Habit());
         habitList.add(new Habit("Cool habit name", "this is a description"));
         habitList.add(new Habit("Meditate twice daily", "Who could possibly set this habit", 1, 0, 2, 12));
@@ -46,6 +46,8 @@ public class MainActivity extends AppCompatActivity {
         HabitListAdapter listAdapter = new HabitListAdapter(habitArray);
 
         recyclerView.setAdapter(listAdapter);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));*/
+
+        setContentView(R.layout.edit_habit_screen);
     }
 }
