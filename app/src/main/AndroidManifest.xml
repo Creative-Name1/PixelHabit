@@ -20,9 +20,7 @@
         <!-- Main activity tag, what will eventually be the main list of habits -->
         <activity
             android:name=".MainActivity"
-            android:exported="true"> <!-- android:name is necessary to identify the activity
-                                          android:exported means this activity can be accessed
-                                                    from outside the app (necessary to run it) -->
+            android:exported="true"> <!-- android:name is necessary to identify the activity -->
 
             <intent-filter> <!-- Intent-filter tag is here to declare what this activity is for
                                                for stuff outside this app (necessary to run it) -->
@@ -36,6 +34,8 @@
 
             </intent-filter>
         </activity>
+
+        <activity android:name=".EditHabitActivity"/>
     </application>
 
 </manifest>
