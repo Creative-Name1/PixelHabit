@@ -69,4 +69,29 @@ public class StorageManager {
             return new ArrayList<Habit>();
         }
     }
+
+    public ArrayList<Habit> getIncompleteHabitList() {
+        try {
+            Gson jsonInterpreter = new Gson();
+
+            FileInputStream fis = context.openFileInput("habit_list_incomplete.json");
+            BufferedReader jsonReader = new BufferedReader(new InputStreamReader(fis)); // inputstreamreader converts bytes to characters, bufferedreader converts characters to strings
+
+            String outJson = "";
+
+            // BufferedReader calls readline, keeps track of index on its own, returns null when the line DNE
+            for (String outAdd = jsonReader.readLine(); // when initializing, we make a string outadd equal to the first line
+                 outAdd != null; // bufferedreader returns null when there are no lines left to read
+                 outAdd = jsonReader.readLine()) { // ofc we set outadd to the next line each repeat
+
+                outJson += outAdd;
+            }
+
+            Type habitList = new TypeToken<ArrayList<Habit>>(){}.getType();
+            return new ArrayList<Habit>(jsonInterpreter.fromJson(outJson, habitList));
+        } catch (IOException e) {
+            Log.d("storage_manager", ("Load failed: " + e.getMessage()), e);
+            return new ArrayList<Habit>();
+        }
+    }
 }
