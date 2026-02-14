@@ -39,7 +39,6 @@ public class HabitListAdapter extends RecyclerView.Adapter<HabitViewHolder> {
 
         // setting onClickListeners for the specific habit's background and complete button
         holder.getBackground().setOnClickListener(v ->{
-            Log.d("ONCLICK", ("Backround was clicked! ID:" + position));
             Intent intent = new Intent(v.getContext(), EditHabitActivity.class);
             // "from: MainActivity, to:EditHabitActivity"
 
@@ -49,6 +48,7 @@ public class HabitListAdapter extends RecyclerView.Adapter<HabitViewHolder> {
             intent.putExtra("completion_unit", h.getCompletionTypeUnit());
             intent.putExtra("min", h.getMin());
             intent.putExtra("max", h.getMax());
+            intent.putExtra("index", position);
 
             v.getContext().startActivity(intent);
         });

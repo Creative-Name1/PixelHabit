@@ -42,6 +42,35 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20sp"
             android:layout_marginStart="20sp"
+            android:orientation="vertical"
+            android:clickable="true"
+            android:focusable="true">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10sp"
+                android:layout_marginStart="4sp"
+                android:text="To do:"
+                android:fontFamily="@font/ultrakill_font"
+                android:textSize="22sp"/>
+
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:visibility="visible"
+            android:id="@+id/habit_list"
+            android:layout_marginTop="10sp"
+            android:layout_marginBottom="50sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </androidx.recyclerview.widget.RecyclerView>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20sp"
+            android:layout_marginStart="20sp"
             android:orientation="vertical">
 
             <TextView
@@ -49,7 +78,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10sp"
                 android:layout_marginStart="4sp"
-                android:text="Name:"
+                android:text="Completed:"
                 android:fontFamily="@font/ultrakill_font"
                 android:textSize="22sp"/>
 
@@ -60,14 +89,6 @@
                 android:background="@drawable/black"/>
 
         </LinearLayout>
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/habit_list"
-            android:layout_marginTop="10sp"
-            android:layout_marginBottom="50sp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-        </androidx.recyclerview.widget.RecyclerView>
 
     </LinearLayout>
 
